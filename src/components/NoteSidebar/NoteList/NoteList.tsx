@@ -8,7 +8,7 @@ export function NoteList() {
 
     return (
         <div className={styles.list}>
-            { notes.map((note: Note) => <NoteListElement note={note}/>) }
+            { notes.map((note: Note) => <NoteListElement key={note.id} note={note}/>) }
         </div>
     );
 };

@@ -8,10 +8,3 @@ export interface NoteDto {
 
   readonly text: string;
 }
-
-/** All statuses. */
-export enum AnimeStatusDto {
-  Airing = "AIRING",
-  Finished = "FINISHED",
-  NotYetAired = "NOT_YET_AIRED",
-}

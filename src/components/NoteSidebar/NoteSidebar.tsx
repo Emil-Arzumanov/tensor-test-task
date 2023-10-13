@@ -7,6 +7,7 @@ import { NoteSort } from "./NoteSort";
 import { useEffect } from "react";
 import { NotesService } from "services/notesService";
 import { useGlobalContext } from "hooks/useGlobalContext";
+import { ListFilter } from "types/models/ListFilter";
 
 export function NoteSidebar() {
     const { 
@@ -16,11 +17,18 @@ export function NoteSidebar() {
         setNote,
         setNoteHeading,
         setNoteText,
+        currentSearch,
+        currentSort,
     } = useGlobalContext();
 
+    const listFilters: ListFilter = {
+        search: currentSearch,
+        sort: currentSort,
+    }
+
     useEffect(() => {
-        setNotes(NotesService.getNotes());
-    }, [])
+        setNotes(NotesService.getNotes(listFilters));
+    }, [listFilters.search, listFilters.sort])
 
     return (
         <div className={styles.sidebar}>

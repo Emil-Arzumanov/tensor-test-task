@@ -30,11 +30,7 @@ export const NoteListElement: FC<ListElementProps> = ({note}) => {
       <h4>{note.heading}</h4>
       <p>
         {
-          note.date.toLocaleDateString('ru-ru', { 
-            year:"numeric",
-            month:"short",
-            day:"numeric",
-          })
+          `${note.date.toLocaleDateString()} ${note.date.toLocaleTimeString()}`
         }
       </p>
       <div className={styles.deleteButton}>

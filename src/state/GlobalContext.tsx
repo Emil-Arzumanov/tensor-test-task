@@ -1,10 +1,6 @@
 import { Note } from 'types/models/NoteList';
 import React from 'react';
-
-export enum sortDirection {
-  Asc = 'asc',
-  Desc = 'desc',
-}
+import { SortDirection } from 'types/models/ListFilter';
 
 export interface IGlobalContext {
   notes: Note[],
@@ -25,11 +21,11 @@ export interface IGlobalContext {
   createMode: boolean,
   setCreateMode: React.Dispatch<React.SetStateAction<boolean>>,
 
-  currentSearch: string | null,
-  setCurrentSearch: React.Dispatch<React.SetStateAction<string | null>>,
+  currentSearch: string,
+  setCurrentSearch: React.Dispatch<React.SetStateAction<string>>,
 
-  currentSort: sortDirection | null,
-  setCurrentSort: React.Dispatch<React.SetStateAction<sortDirection | null>>,
+  currentSort: SortDirection,
+  setCurrentSort: React.Dispatch<React.SetStateAction<SortDirection>>,
 };
 
 interface IProps {
@@ -45,8 +41,8 @@ export const GlobalContextProvider = ({children}: IProps) => {
   const [noteText, setNoteText] = React.useState<string>('');
   const [editMode, setEditMode] = React.useState<boolean>(false);
   const [createMode, setCreateMode] = React.useState<boolean>(false);
-  const [currentSearch, setCurrentSearch] = React.useState<string | null>(null);
-  const [currentSort, setCurrentSort] = React.useState<sortDirection | null>(null);
+  const [currentSearch, setCurrentSearch] = React.useState<string>('');
+  const [currentSort, setCurrentSort] = React.useState<SortDirection>(SortDirection.Asc);
 
   return <GlobalContext.Provider value={{
     notes, setNotes,
