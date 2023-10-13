@@ -4,3 +4,8 @@
   width: 75%;
   overflow-y: scroll;
 }
+
+.buttonWrapper {
+  display: flex;
+  gap: 6px;
+}

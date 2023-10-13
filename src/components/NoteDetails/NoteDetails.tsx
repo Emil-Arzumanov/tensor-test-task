@@ -1,27 +1,28 @@
-import { Button } from "components/shared/Button";
 import styles from "./NoteDetails.module.css";
 import { FC } from "react";
+import { useGlobalContext } from "hooks/useGlobalContext";
+import { ViewDetails } from "./ViewDetails";
+import { EditDetails } from "./EditDetails";
+import { AddDetails } from "./AddDetails";
 
 export const NoteDetails: FC = () => {
+    const { note, editMode, createMode } = useGlobalContext();
 
-    return (
-        <div className={styles.mainWrapper}>
-            <div className={styles.buttonWrapper}>
-                <Button actionFunction={() => alert("Details")} buttonText={'Редактировать'} />
-                <Button actionFunction={() => alert("Details")} buttonText={'Удалить'} />
-            </div>
-
-            <div>
-                <h2>Заголовок заметки 1</h2>
-
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
-                in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>
-        </div>
-    );
+    if (note && editMode === false && createMode === false) {
+        return (
+            <ViewDetails noteProp={note}/>
+        );
+    } else if (note && editMode && createMode === false) {
+        return (
+            <EditDetails noteProp={note}/>
+        );
+    } else if (!note && editMode === false && createMode) {
+        return (
+            <AddDetails/>
+        );
+    } else {
+        return (
+            <div className={styles.mainWrapper}></div>
+        );
+    }
 };

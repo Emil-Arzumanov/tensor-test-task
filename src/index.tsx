@@ -7,5 +7,5 @@ if (rootElement === null) {
 }
 
 ReactDOM.createRoot(rootElement).render(
-	<App />,
+	<App />
 );
