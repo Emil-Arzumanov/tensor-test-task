@@ -2,8 +2,9 @@ import { useGlobalContext } from "hooks/useGlobalContext";
 import styles from "./NoteSort.module.css";
 import { SORT_DIRECTION_TO_READABLE, SortDirection } from "types/models/ListFilter";
 import { getEnumKeys } from "utils/ListFilter.utils";
+import { FC } from "react";
 
-export function NoteSort() {
+export const NoteSort: FC = () => {
   const { 
     currentSort, 
     setCurrentSort,

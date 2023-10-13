@@ -2,8 +2,9 @@ import styles from "./NoteList.module.css";
 import { NoteListElement } from "components/shared/NoteListElement";
 import { Note } from "types/models/NoteList";
 import { useGlobalContext } from "hooks/useGlobalContext";
+import { FC } from "react";
 
-export function NoteList() {
+export const NoteList: FC = () => {
     const { notes } = useGlobalContext();
 
     return (

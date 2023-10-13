@@ -1,6 +1,9 @@
 /** Represents field for filtration. Model of filtration. */
 export interface ListFilter {
+  /** Field for search. */
   readonly search: string;
+
+  /** Field for sort. With enum as type */
   readonly sort: SortDirection;
 }
 

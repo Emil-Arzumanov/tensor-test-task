@@ -1,7 +1,8 @@
 import { useGlobalContext } from "hooks/useGlobalContext";
 import styles from "./NoteSearch.module.css";
+import { FC } from "react";
 
-export function NoteSearch() {
+export const NoteSearch: FC = () => {
   const { 
     currentSearch, 
     setCurrentSearch,

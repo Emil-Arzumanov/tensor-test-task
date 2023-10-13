@@ -25,14 +25,4 @@ export namespace NoteMapper {
       text: model.text,
     };
   }
-
-  /**
-	 * Anime statuses mapper.
-	 * From dto to model.
-	 *
-	export const ANIME_STATUSES_FROM_DTO_MAP = {
-		[AnimeStatusDto.Airing]: AnimeStatus.Airing,
-		[AnimeStatusDto.Finished]: AnimeStatus.Finished,
-		[AnimeStatusDto.NotYetAired]: AnimeStatus.NotYetAired,
-	};*/
 }

@@ -4,12 +4,12 @@ import { Button } from "components/shared/Button";
 import { NoteList } from "./NoteList";
 import { NoteSearch } from "./NoteSearch";
 import { NoteSort } from "./NoteSort";
-import { useEffect } from "react";
+import { FC, useEffect } from "react";
 import { NotesService } from "services/notesService";
 import { useGlobalContext } from "hooks/useGlobalContext";
 import { ListFilter } from "types/models/ListFilter";
 
-export function NoteSidebar() {
+export const NoteSidebar: FC = () => {
     const { 
         setNotes, 
         setCreateMode,
