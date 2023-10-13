@@ -12,19 +12,16 @@ export const DetailsInputs: FC = () => {
 
     return (
       <div className={styles.inputsWrapper}>
-        <h2>Загаловок</h2>
         <input 
           onChange={(e) => setNoteHeading(e.target.value)}
           value={noteHeading} 
           placeholder="Heading" 
           type="text" 
         />
-        <h2>Описание</h2>
-        <input
+        <textarea
           onChange={(e) => setNoteText(e.target.value)}
           value={noteText} 
           placeholder="Text"
-          type="text"
         />
       </div>
     );
