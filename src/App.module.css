@@ -1,0 +1,15 @@
+.pageLayout {
+  display: flex;
+  gap: 5px;
+  padding: 5px;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.ass {
+  display: flex;
+}
+
+.one {
+  margin-right: 20;
+}

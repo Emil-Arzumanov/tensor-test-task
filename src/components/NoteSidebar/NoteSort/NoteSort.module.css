@@ -1,0 +1,16 @@
+.sortWrapper {
+  font-weight: bold;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.select {
+  all: unset;
+  background-color: #c4c4c4;
+  text-align: center;
+}
+
+.select::after {
+  border-radius: 0;
+}

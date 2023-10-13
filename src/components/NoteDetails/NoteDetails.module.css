@@ -1,0 +1,15 @@
+.mainWrapper {
+  border: 2px solid #c4c4c4;
+  padding: 5px 20px;
+  width: 75%;
+  overflow-y: scroll;
+}
+
+.mainWrapper p {
+  margin: 0;
+}
+
+.buttonWrapper {
+  display: flex;
+  gap: 6px;
+}

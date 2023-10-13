@@ -1,10 +1,16 @@
+import { NoteDetails } from "components/NoteDetails";
+import { NoteSidebar } from "components/NoteSidebar";
+import styles from "./App.module.css";
 import React, { FC } from "react";
 
 
 export const App: FC = () => {
+  
+
   return (
-      <div>
-        123
-      </div>
+      <main className={styles.pageLayout}>
+        <NoteSidebar/>
+        <NoteDetails/>
+      </main>
   );
 }

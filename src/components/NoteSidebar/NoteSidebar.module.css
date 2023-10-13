@@ -1,0 +1,11 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 5px;
+  width: 35%;
+  overflow-y: scroll;
+
+  /** To make it on line with 'delete' and 'edit' buttons */
+  padding-top: 6.6px;
+}
