@@ -1,16 +1,10 @@
 import { FC } from "react";
 import styles from "./NoteListElement.module.css";
 import { Button } from "../Button";
-
-interface INote {
-  readonly id: number,
-  readonly heading: string,
-  readonly date: Date,
-  readonly text: string,
-};
+import { Note } from "types/models/NoteList";
 
 interface ListElementProps {
-  readonly note: INote,
+  readonly note: Note,
 };
 
 export const NoteListElement: FC<ListElementProps> = ({note}) => {
